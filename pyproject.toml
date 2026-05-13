@@ -1,0 +1,31 @@
+[project]
+name = "zpskbot"
+version = "0.1.0"
+description = "Telegram AI bot for groups/chats with analytics"
+requires-python = ">=3.9"
+dependencies = [
+  "aiogram>=3.13.1",
+  "openai>=1.52.2",
+  "asyncpg>=0.30.0",
+  "pgvector>=0.3.6",
+  "pydantic>=2.9.2",
+  "pydantic-settings>=2.5.2",
+  "python-dotenv>=1.0.1",
+  "apscheduler>=3.10.4",
+  "aiohttp>=3.10.10",
+  "tenacity>=9.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.3.3",
+  "pytest-asyncio>=0.24.0",
+]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
