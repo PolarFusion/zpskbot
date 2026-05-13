@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: zpskbot
+    env: docker
+    plan: starter
+    autoDeploy: true
+    envVars:
+      - key: USE_WEBHOOK
+        value: "true"
+      - key: WEBHOOK_PATH
+        value: "/telegram/webhook"
+      - key: WEBHOOK_HOST
+        value: "0.0.0.0"
+      - key: WEBHOOK_PORT
+        value: "10000"
